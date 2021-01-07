@@ -4,7 +4,7 @@
   --color-white: #ffffff;
   --color-light-white: #eeeeee;
   --color-dark-white: #bdbdbd;
-  --color-dark-blue: #4682b4;
+  --color-custom-blue: #0081cc;
   --color-pink: #fe918d;
   --color-dark-pink: #ff6863;
   --color-dark-grey: #4d4d4d;
@@ -99,7 +99,7 @@ p {
 #navbar {
   display: flex;
   justify-content: space-between;
-  background-color: var(--color-blue);
+  background-color: var(--color-custom-blue);
   align-items: center;
   color: var(--color-white);
   padding: 16px;
@@ -126,7 +126,7 @@ p {
 }
 
 .navbar__menu__item:hover {
-  background-color: var(--color-dark-blue);
+  background-color: var(--color-blue);
 }
 
 /* Home */
