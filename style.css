@@ -4,6 +4,7 @@
   --color-white: #ffffff;
   --color-light-white: #eeeeee;
   --color-dark-white: #bdbdbd;
+  --color-dark-blue: #4682b4;
   --color-pink: #fe918d;
   --color-dark-pink: #ff6863;
   --color-dark-grey: #4d4d4d;
@@ -49,8 +50,18 @@ a {
 }
 
 ul {
-  list-style: none;
   padding-left: 0;
+}
+
+li {
+  list-style: none;
+}
+
+button {
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+  outline: none;
 }
 
 /* Typography */
@@ -88,7 +99,7 @@ p {
 #navbar {
   display: flex;
   justify-content: space-between;
-  background-color: var(--color-pink);
+  background-color: var(--color-blue);
   align-items: center;
   color: var(--color-white);
   padding: 16px;
@@ -115,5 +126,35 @@ p {
 }
 
 .navbar__menu__item:hover {
-  background-color: var(--color-dark-pink);
+  background-color: var(--color-dark-blue);
+}
+
+/* Home */
+
+#home {
+  background: url("imgs/home-background.png") center/cover no-repeat;
+  padding: 40px;
+  text-align: center;
+}
+
+.home__avatar {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  border: 2px solid var(--color-light-white);
+}
+
+.home__title,
+.home__description {
+  color: var(--color-white);
+}
+
+.home__contact {
+  color: var(--color-white);
+  font-size: var(--font-regular);
+  font-weight: var(--weight-bold);
+  margin: 24px;
+  padding: 8px 12px;
+  border: 2px solid var(--color-white);
+  border-radius: var(--size-border-radius);
 }
