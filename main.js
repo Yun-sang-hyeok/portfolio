@@ -38,8 +38,12 @@ HomecontactBtn.addEventListener('click',() => {
 // Make home slowly fade to transparent as the window scrolls down
 const home = document.querySelector('.home__container');
 const homeHeight = home.getBoundingClientRect().height;
+
+const about = document.querySelector('#about');
+const aboutHeight = about.getBoundingClientRect().height;
 document.addEventListener('scroll', () => {
     home.style.opacity = 1 - window.scrollY / homeHeight;
+    about.style.opacity = 1.8 - window.scrollY / aboutHeight;
 })
 
 
