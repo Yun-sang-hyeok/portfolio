@@ -100,12 +100,20 @@ p {
 
 /* Nav */
 #navbar {
+  position: fixed;
   display: flex;
   justify-content: space-between;
-  background-color: var(--color-custom-blue);
+  background-color: transparent;
   align-items: center;
   color: var(--color-white);
   padding: 16px;
+  width: 100%;
+  transition: all var(--animation-duration) ease-in-out;
+}
+
+#navbar.navbar--dark {
+  background-color: var(--color-custom-blue);
+  padding: 8px;
 }
 
 .navbar__menu {
@@ -146,6 +154,7 @@ p {
 #home {
   background: url("imgs/home-background.png") center/cover no-repeat;
   padding: 40px;
+  padding-top: 120px;
   text-align: center;
 }
 
@@ -460,7 +469,7 @@ p {
 
 .contact__links {
   font-size: var(--font-large);
-  margin: 24px 0;
+  margin: 24px 0px;
 }
 
 .contact__links i {
@@ -508,5 +517,9 @@ p {
   .testimonial__avatar {
     width: 80px;
     height: 80px;
+  }
+
+  .navbar__menu .active {
+    display: flex;
   }
 }
