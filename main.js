@@ -1,10 +1,4 @@
 'use strict';
-const toggleBtn = document.querySelector('.navbar__toggle-btn');
-const menu = document.querySelector('.navbar__menu');
-
-toggleBtn.addEventListener('click', () => {
-    menu.classList.toggle('active');
-});
 
 // Make navbar transparent when it is on the top
 const navbar = document.querySelector("#navbar");
@@ -26,8 +20,15 @@ navbarMenu.addEventListener('click', (event) => {
 
         return;
     }
+    navbarMenu.classList.remove('open');
     scrollIntoView(link);
 })
+
+// Navbar toggle button for small screen
+const navbarToggleBtn = document.querySelector('.navbar__toggle-btn');
+navbarToggleBtn.addEventListener('click', () => {
+    navbarMenu.classList.toggle('open');
+});
 
 // Handle click on "contact me" button on home
 const HomecontactBtn = document.querySelector('.home__contact');
