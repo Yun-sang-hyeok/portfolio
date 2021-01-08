@@ -453,6 +453,27 @@ p {
   color: var(--color-custom-blue);
 }
 
+/* Scroll 나는 display none으로 하지않고 처음에 opacity를 마이너스를 주어서 안보이게 하였다.*/
+.arrow-up {
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  font-size: 50px;
+  background-color: var(--color-custom-blue);
+  color: var(--color-white);
+  opacity: 0;
+  pointer-events: none;
+  transition: all var(--animation-duration) ease-in;
+}
+
+.arrow-up.visible {
+  opacity: 1;
+  pointer-events: visible;
+}
+
 /* Contact */
 #contact {
   background-color: var(--color-custom-blue);

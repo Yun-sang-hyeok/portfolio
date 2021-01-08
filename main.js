@@ -46,13 +46,34 @@ document.addEventListener('scroll', () => {
     about.style.opacity = 1.8 - window.scrollY / aboutHeight;
 })
 
+// Show "arrow up" button when scrolling down
+const arrowUp = document.querySelector('.arrow-up');
+document.addEventListener('scroll', () => {
+    if(window.scrollY > homeHeight / 2){
+        arrowUp.classList.add('visible');
+    } else {
+        arrowUp.classList.remove('visible');   
+    }
+})
+
+arrowUp.addEventListener('click', () => {
+    const scrollTo = document.querySelector('#home');
+    scrollTo.scrollIntoView({behavior: 'smooth'});
+})
 
 
+// I made it but When it started, Button showed. It's wrong.
+/* const arrowBtn = document.querySelector('.arrow-up');
 
+arrowBtn.addEventListener('click', () => {
+    scrollIntoView("#home");
+})
 
-
-
-
+// I made it but When it started, Button showed. It's wrong.
+document.addEventListener('scroll', () => {
+    arrowBtn.style.opacity = -0.5 + window.scrollY / aboutHeight;
+})
+*/
 
 
 function scrollIntoView(selector){
