@@ -78,12 +78,21 @@ document.addEventListener('scroll', () => {
 // Projects
 const workBtnCaontainer = document.querySelector('.work__categories');
 const projectContainer = document.querySelector('.work__projects');
+const category = document.querySelector('.category__btn');
 const projects = document.querySelectorAll('.project'); //8개 project담긴 요소들이 배열로 할당
 workBtnCaontainer.addEventListener('click', (e) => {
     const filter = e.target.dataset.filter || e.target.parentNode.dataset.filter;
     if(filter == null) {
         return;
     }
+
+    // Remove selection from previous item select the new one
+    const active = document.querySelector('.category__btn.selected');
+    active.classList.remove('selected');
+    const target = e.target.nodeName === 'BUTTON' ? e.target : 
+                        e.target.parentNode;
+    target.classList.add('selected');
+
 
     projectContainer.classList.add('anim-out');
     setTimeout(() => {
