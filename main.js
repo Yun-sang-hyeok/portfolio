@@ -44,7 +44,7 @@ const about = document.querySelector('#about');
 const aboutHeight = about.getBoundingClientRect().height;
 document.addEventListener('scroll', () => {
     home.style.opacity = 1 - window.scrollY / homeHeight;
-    about.style.opacity = 1.8 - window.scrollY / aboutHeight;
+    //about.style.opacity = 1.8 - window.scrollY / aboutHeight;
 })
 
 // Show "arrow up" button when scrolling down
